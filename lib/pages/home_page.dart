@@ -15,6 +15,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final ScrollController _scrollController = ScrollController();
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
@@ -26,6 +34,7 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: CustomColor.scaffoldBackground,
           endDrawer: constraints.maxWidth >= kMinDesktopWidth ? null : const DrawerMobile(),
           body: ListView(
+            controller: _scrollController,
             scrollDirection: Axis.vertical,
             children: [
               //MAIN
@@ -41,7 +50,7 @@ class _HomePageState extends State<HomePage> {
               //     },
               //   ),
 
-              const MainDesktop(),
+              MainDesktop(scrollController: _scrollController,),
 
               //SKILLS
               Container(
