@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 class CustomColor {
   static const Color scaffoldBackground = Color(0xff242526);
+  static const Color scaffoldBackgroundLight = Color(0xff303233);
   static const Color backgroundLight1 = Color(0xff333646);
   static const Color backgroundLight2 = Color(0xff424657);
   static const Color textFieldBackground = Color(0xffC8C9CE);

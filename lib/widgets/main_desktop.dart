@@ -34,41 +34,48 @@ class _MainDesktopState extends State<MainDesktop> {
       child: Stack(
         alignment: Alignment.center,
         children: [
+
+          Image.asset(
+            "assets/img/android.png",
+            width: screenWidth,
+            fit: BoxFit.cover,
+            color: CustomColor.scaffoldBackgroundLight
+          ),
+
           //CHANGE LANGUAGE
 
 
-          
           
           //BODY
           SizedBox(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SizedBox(
-                  width: referenceSize / 2.7,
-                  height: referenceSize / 2.7,
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Container(
-                        width: referenceSize / 2,
-                        height: referenceSize / 3.5,
-                        decoration: BoxDecoration(
-                          color: CustomColor.yellowSecondary,
-                          borderRadius: BorderRadius.circular(referenceSize),
-                        ),
-                      ),
-                      Transform.translate(
-                        offset: Offset(0, -referenceSize * 0.12),
-                        child: Image.asset(
-                          "assets/img/android.png",
-                          width: referenceSize / 2.8,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                // SizedBox(
+                //   width: referenceSize / 2.7,
+                //   height: referenceSize / 2.7,
+                //   child: Stack(
+                //     alignment: Alignment.center,
+                //     children: [
+                //       Container(
+                //         width: referenceSize / 2,
+                //         height: referenceSize / 3.5,
+                //         decoration: BoxDecoration(
+                //           color: CustomColor.yellowSecondary,
+                //           borderRadius: BorderRadius.circular(referenceSize),
+                //         ),
+                //       ),
+                //       Transform.translate(
+                //         offset: Offset(0, -referenceSize * 0.12),
+                //         child: Image.asset(
+                //           "assets/img/android.png",
+                //           width: referenceSize / 2.8,
+                //           fit: BoxFit.contain,
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
 
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
