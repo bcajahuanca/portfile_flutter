@@ -178,7 +178,7 @@ class _MainDesktopState extends State<MainDesktop> {
             child: GestureDetector(
               onTap: (){
                 widget.scrollController.animateTo(
-                widget.scrollController.position.maxScrollExtent / 2.78,
+                widget.scrollController.position.maxScrollExtent / 3.9,
                 duration: Duration(milliseconds: 500),
                 curve: Curves.easeInOut,
               );

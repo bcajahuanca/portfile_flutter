@@ -58,6 +58,7 @@ class _HomePageState extends State<HomePage> {
               Container(
                 // height: 500,
                 width: double.maxFinite,
+                padding: EdgeInsets.symmetric(horizontal: screenWidth/3),
                 color: CustomColor.whitePrimary,
                 child: Column(
                   children: [
@@ -85,17 +86,18 @@ class _HomePageState extends State<HomePage> {
                       color: CustomColor.backgroundLight2,
                       thickness: 2.0,
                       height: 40.0,
-                      indent: screenWidth / 4.5,
-                      endIndent: screenWidth / 4.5,
+                      // indent: screenWidth / 0.5,
+                      // endIndent: screenWidth / 0.5,
                     ),
                     Container(
                       constraints: BoxConstraints(
                         maxWidth: screenWidth / 1.8
                       ),
                       child: Text(
-                        "Hi! I’m a Flutter developer with a passion for building clean, fast, and user-friendly mobile apps. I’m currently in my final year of studying Systems and Computer Engineering, and I’ve already had the chance to work on real-world projects that are live on both the App Store and Google Play.\n",
+                        "Peruvian Software Engineer currently based in Madras, Oregon, with a strong background in Systems and Informatics Engineering and solid experience in mobile development.",
                         style: GoogleFonts.robotoSerif(
-                          fontSize: screenWidth > 850 ? 25.0 : 20.0,
+                          fontSize: screenWidth > 850 ? 20.0 : 15.0,
+                          letterSpacing: 0.9,
                           color: CustomColor.backgroundLight2,
                         ),
                         textAlign: TextAlign.justify,
@@ -103,60 +105,17 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Container(
                       constraints: BoxConstraints(
-                        maxWidth: screenWidth / 1.8
+                        maxWidth: screenWidth / 1.8,
                       ),
+                      padding: const EdgeInsets.only(bottom: 50.0),
                       child: Text(
-                        "I enjoy turning ideas into functional apps using tools like Flutter, Dart, Kotlin, Android Studio, and Xcode. I’m always learning and improving, whether it’s exploring new libraries, polishing UI/UX, or diving deeper into native features. For me, coding is not just about writing code, it’s about solving problems and creating great user experiences.\n",
+                        "Specialized in Android, iOS, and Flutter, with published applications on the App Store and Play Store, as well as custom library development (UI components, animations, MQTT, maps, and QR scanning). Founder of projects like BIIX and Voy a Bordo, focused on building innovative technology solutions for the transportation sector.",
                         style: GoogleFonts.robotoSerif(
-                          fontSize: screenWidth > 850 ? 25.0 : 20.0,
+                          fontSize: screenWidth > 850 ? 20.0 : 15.0,
                           color: CustomColor.backgroundLight2,
                         ),
                         textAlign: TextAlign.justify,
                       ),
-                    ),
-                    SizedBox(
-                      width: screenWidth / 1.8,
-                      child: Text(
-                        'Skills:',
-                        style: GoogleFonts.robotoSerif(
-                          fontSize: screenWidth > 850 ? 25.0 : 20.0,
-                          color: CustomColor.backgroundLight2,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.start,
-                      ),
-                    ),
-                    Wrap(
-                      alignment: WrapAlignment.center,
-                      crossAxisAlignment: WrapCrossAlignment.center,
-                      runSpacing: 10.0,
-                      children: [
-                        for(int i = 0; i < workedAs.length; i++)
-                        Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              workedAs[i],
-                              style: GoogleFonts.robotoSerif(
-                                fontSize: screenWidth > 850 ? 20.0 : 13.0,
-                                color: CustomColor.backgroundLight2,
-                              ),
-                            ),
-                            if(i != workedAs.length - 1)
-                              Container(
-                                margin: const EdgeInsets.symmetric(horizontal: 15.0),
-                                decoration: BoxDecoration(
-                                  color: CustomColor.yellowPrimary,
-                                  borderRadius: BorderRadius.circular(5.0),
-                                ),
-                                child: SizedBox(
-                                  width: 6.0,
-                                  height: 6.0,
-                                )
-                              )
-                          ],
-                        )
-                      ],
                     ),
                   ],
                 ),

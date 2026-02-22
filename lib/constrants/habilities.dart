@@ -23,7 +23,6 @@ List<FaIcon> socialNetWorks = iconDataList
         ))
     .toList();
 
-
 List<String> socialNetWorksLinks = [
   "https://github.com/bcajahuanca",
   "https://www.linkedin.com/in/brad-cajahuanca/",
@@ -31,3 +30,5 @@ List<String> socialNetWorksLinks = [
   "https://stackoverflow.com/users/30311088/bcatsmp",
   "mailto:brad.cajahuancacruz@gmail.com"
 ];
+
+// List<>
